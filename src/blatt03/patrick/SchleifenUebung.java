@@ -21,7 +21,8 @@ public class SchleifenUebung {
     public static void trigonomie(float startwert, float endwert, float schrittweite) {
         System.out.println("Alle Sinus, Cosinus von -4 ... 4 in 0.5er-Schritten:");
         for(float i = startwert; i <= endwert; i+= schrittweite) {
-
+            System.out.println("x, sin(x), cos(x): " + i + ", " + (Math.sin(i))
+                                + ", " + (Math.cos(i)));
         }
 
 
