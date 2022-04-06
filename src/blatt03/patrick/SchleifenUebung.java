@@ -7,7 +7,7 @@ public class SchleifenUebung {
         float endwert = 4f;
         float schrittweite = 0.5f;
         //quadratzahlen(startwert,endwert,schrittweite);
-        trigonomie(startwert, endwert, schrittweite);
+        //trigonometry(startwert, endwert, schrittweite);
 
     }
 
@@ -18,7 +18,7 @@ public class SchleifenUebung {
         }
     }
 
-    public static void trigonomie(float startwert, float endwert, float schrittweite) {
+    public static void trigonometry(float startwert, float endwert, float schrittweite) {
         System.out.println("Alle Sinus, Cosinus von -4 ... 4 in 0.5er-Schritten:");
         for(float i = startwert; i <= endwert; i+= schrittweite) {
             System.out.println("x, sin(x), cos(x): " + i + ", " + (Math.sin(i))
