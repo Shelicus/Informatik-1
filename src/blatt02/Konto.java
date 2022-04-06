@@ -64,9 +64,11 @@ public class Konto {
         //TM1: Sparplan mit Zineszins
 
         for (int i = 1; i <= jahre; i++) {
-            System.out.println("Guthaben nach dem " + i + ". Jahr " + guthaben); // Nachdem das Guthaben Ausgeben wurde, wir es fuer das naechste Jahr berechnet
+
             guthaben *= (1. + zins / 100.0); //Zinseszins Formel: K_neu = K ( 1 + p / 100)^2
+
             guthaben += erhoehung;
+            System.out.println("Guthaben nach dem " + i + ". Jahr " + guthaben); // Nachdem das Guthaben Ausgeben wurde, wir es fuer das naechste Jahr berechnet
         }
     }
 
@@ -86,10 +88,13 @@ public class Konto {
 
         double abgehobenerBetrag = 0;
 
-        for (int x = 1; x <= jahre; x++) {
-            System.out.println("Guthaben einschließlich des abgehobenen Betrages nach dem " + x + ". Jahre: " + (guthaben + abgehobenerBetrag)); //Berechnung des Guthabens mit ausgegebenen Zinsen
+        for (int x = 0; x < jahre; x++) {
             abgehobenerBetrag += guthaben * zins / 100; //Speicherung des schon abgehobenen Betrages
             guthaben += erhoehung;
+
+            System.out.println("Guthaben einschließlich des abgehobenen Betrages nach dem " + (x+1) + ". Jahre: " + (guthaben + abgehobenerBetrag)); //Berechnung des Guthabens mit ausgegebenen Zinsen
+
+
         }
     }
 
