@@ -47,21 +47,28 @@ public class LoesungDiagonalen extends JFrame {
      *  @param g Grafik, auf die gezeichnet wird.
      */
     public void meineDiagonalen(Graphics g){
-        int x25 = this.getWidth() / 4;		// x-Koordinate bei 25% der Fensterbreite (von links)
+        int x25 = this.getWidth() / 4;        // x-Koordinate bei 25% der Fensterbreite (von links)
         int x75 = this.getWidth() * 3 / 4;  // x-Koordinate bei 75% der Fensterbreite (von links)
-        int y25 = this.getHeight() / 4;		// y-Koordinate bei 25% der Fensterbreite (von oben)
+        int y25 = this.getHeight() / 4;        // y-Koordinate bei 25% der Fensterbreite (von oben)
         int y75 = this.getHeight() * 3 / 4; // y-Koordinate bei 75% der Fensterbreite (von oben)
 
         // TODO: Komplettes Rechteck zeichnen
         g.drawLine(x75, y25, x25, y25);
         g.drawLine(x25, y25, x25, y75);
+        g.drawLine(x25, y75, x75, y75);
+        g.drawLine(x75, y75, x75, y25);
 
-        // Beispiel für Einsatz anderer Farbe
+
+        /* Beispiel für Einsatz anderer Farbe
         g.setColor(Color.RED);
         g.drawLine(x25, y75, x75, y75);
+         */
 
         // TODO: rote Diagonale zeichnen
-
+        g.setColor(Color.RED);
+        g.drawLine(x25,y25,x75,y75);
         // TODO: blaue Diagonale zeichnen
+        g.setColor(Color.blue);
+        g.drawLine(x75,y25,x25,y75);
     }
 }
