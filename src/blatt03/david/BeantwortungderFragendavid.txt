@@ -1,4 +1,4 @@
-Einordnung Java
+13.3.1 Einordnung Java
 
 Aufgabe 3.2: Nennen Sie bitte zwei Schlüsselworte von Java, die Sie in den letzten
 Übungsblättern verwendet haben, die typisch für objektorientierte Sprachen sind.
@@ -23,3 +23,13 @@ Der Unterschied liegt darin, das eine ADK spezialisiert auf Android geräte ist 
 zur verfügung um die Eingabe vom Handy zu verarbeiten. Außerdem ist die Compilierung auf Android Anwendungen
 spezialisiert (schneller).
 
+
+
+
+13.3.2 Einfache Schleifen
+
+Aufgabe 3.5: Schauen Sie sich bitte die JavaDoc-Seite zur Klasse „Math“ an. Welche Methoden
+dieser Klasse könnten für die folgenden beiden Aufgaben hilfreich sein?
+
+Die verwendung von .pow(), cos() und sin() sind hilfreich bei der Bearbeitung der folgenden Aufgaben. Diese müssen
+jedoch zuvor mit import static java.lang.Math.*; importiert werden.
