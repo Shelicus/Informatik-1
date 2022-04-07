@@ -2,16 +2,13 @@
 /shelf/
 /workspace.xml
 /inf1.1.iml
-/vcs.mxl
-/modules.xml
-/misc.xml
+/.idea
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
 /out/
-.idea/vcs.xml
 *.class
-out/production/inf1.1/blatt03/david/BeantwortungderFragendavid.txt
-out/production/inf1.1/blatt03/patrick/BefragungAntworten.txt
+
+
