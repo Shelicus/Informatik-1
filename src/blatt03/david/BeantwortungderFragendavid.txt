@@ -1,0 +1,25 @@
+Einordnung Java
+
+Aufgabe 3.2: Nennen Sie bitte zwei Schlüsselworte von Java, die Sie in den letzten
+Übungsblättern verwendet haben, die typisch für objektorientierte Sprachen sind.
+
+Schlüsselwort 1: new - Erstellung eines neuen Objekts
+
+Schlüsselwort 2: this - Zuweisung eines Wertes zu einem Objekt
+
+
+
+Aufgabe 3.3: Wieso muss ein Java-Programm nur ein mal kompiliert werden und kann dann auf
+verschiedenen Plattformen (Unix, Windows, ...) eingesetzt werden?
+
+Weil beim Compilieren vom Code ein Bytecode erstellt wird, der Plattformen unabhängig ist und
+nur High-Level-Maschinenanweisungen enthält.
+
+
+
+Aufgabe 3.4: Recherchieren Sie bitte, was unter Android an Java anders ist.
+
+Der Unterschied liegt darin, das eine ADK spezialisiert auf Android geräte ist und stellt bsw. Klick-Events
+zur verfügung um die Eingabe vom Handy zu verarbeiten. Außerdem ist die Compilierung auf Android Anwendungen
+spezialisiert (schneller).
+
