@@ -33,3 +33,44 @@ dieser Klasse könnten für die folgenden beiden Aufgaben hilfreich sein?
 
 Die verwendung von .pow(), cos() und sin() sind hilfreich bei der Bearbeitung der folgenden Aufgaben. Diese müssen
 jedoch zuvor mit import static java.lang.Math.*; importiert werden.
+
+
+
+Aufgabe 3.9: Bestehendes Beispiel analysieren und abändern
+
+1. Analysieren Sie bitte die Klasse LoesungDiagonalen in der Datei
+LoesungDiagonalen.java:
+
+
+1. Wozu dient die paint()-Methode?
+
+Die paint() Methode passt das gezeichnete der Größe vom Fenster an, indem sie die neue Breite und Höhe, sowie
+die neuen Ausgangspunkte auf den Parameter g schreibt.
+
+
+2. Wozu dient der Parameter g?
+
+Der Parameter g dient zur Festlegung der Ausgangswerte 0 auf der x- und y-Achse.
+
+
+3. Zeichnen Sie bitte eine Skizze, welche die Bedeutung der Variablen x25,
+y25, x75, y75 visualisiert.
+
+Als Datei im Anhang.
+
+
+4. Wo soll Ihre Lösung stehen, das heißt, wo soll der Code Ihrer Lösung
+hingeschrieben werden?
+
+Der Code soll unter den Kommentaren TODO geschrieben werden.
+
+
+5. Recherchieren Sie bitte, welche Bedeutung "// TODO-Kommentare"
+• in Java und
+
+
+
+• in Eclipse haben.
+
+Die Kommentare können aufgelistet werden und zeigen an wo noch gearbeitet werden muss in einer Taskbar.
+Auch andere Befehle können angezeigt werden wie zum Beispiel TESTME.

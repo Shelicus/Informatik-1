@@ -1,4 +1,5 @@
 package blatt03.david;
+
 import java.awt.*;
 import javax.swing.JFrame;
 
@@ -7,25 +8,28 @@ import javax.swing.JFrame;
  */
 public class LoesungsBeispiel extends JFrame {
 
-    /** Konstruktor. Nichts zu ändern hier */
-    public LoesungsBeispiel(){
+    /**
+     * Konstruktor. Nichts zu ändern hier
+     */
+    public LoesungsBeispiel() {
         super();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(600,400);
+        this.setSize(600, 400);
         this.setTitle("Lösung in der Klasse " + this.getClass().getName());
         this.setVisible(true);
     }
 
-    /** Main-Methode. Nichts zu ändern hier. */
-    public static void main(String[] args){
+    /**
+     * Main-Methode. Nichts zu ändern hier.
+     */
+    public static void main(String[] args) {
         new LoesungsBeispiel();
     }
 
     /**
      * Beispiel für eine Lösung: Etwas wie ein "C" malen
-     *
      */
-    public void paint(Graphics g){
+    public void paint(Graphics g) {
         int x25 = this.getWidth() / 4;
         int x75 = this.getWidth() * 3 / 4;
         int y25 = this.getHeight() / 4;
