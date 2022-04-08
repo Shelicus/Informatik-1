@@ -47,7 +47,6 @@ public class LoesungXYRaster extends JFrame {
      * Hier bitte die Lösung, um das Raster zu zeichnen
      */
     public void meinRaster(Graphics g) {
-        // TODO
         int x25= this.getWidth() / 4;
         int y25 = this.getHeight() / 4;
         int x75 = this.getWidth() * 3 / 4;

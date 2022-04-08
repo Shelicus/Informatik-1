@@ -46,7 +46,6 @@ public class LoesungKegel extends JFrame {
      * Hier bitte die Lösung, um den Kegel zu zeichnen
      */
     public void meinKegel(Graphics g) {
-        // TODO
         int x25= this.getWidth() / 4;
         int y25 = this.getHeight() / 4;
         int x75 = this.getWidth() * 3 / 4;
@@ -55,12 +54,12 @@ public class LoesungKegel extends JFrame {
         g.drawLine(x25,y25,x75,y25);
         g.drawLine(x25,y75,x75,y75);
 
-        for (int x = 0; x < 49; x++){
-            g.drawLine(x25 + (x * 5),y25,x75 - (x * 5),y75);
+        for (int x = 0; x < 39; x++){
+            g.drawLine(x25 + (x * 15),y25,x75 - (x * 15),y75);
             g.setColor(Color.lightGray);
         }
         g.setColor(Color.BLACK);
-        g.drawLine(x25 + (50 * 5),y25,x75 - (50 * 5),y75);
+        g.drawLine(x25 + (39 * 15),y25,x75 - (39 * 15),y75);
 
     }
 }
