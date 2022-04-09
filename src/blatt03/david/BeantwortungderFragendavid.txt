@@ -45,7 +45,7 @@ LoesungDiagonalen.java:
 1. Wozu dient die paint()-Methode?
 
 Die paint() Methode passt das gezeichnete der Größe vom Fenster an, indem sie die neue Breite und Höhe, sowie
-die neuen Ausgangspunkte auf den Parameter g schreibt.
+die neuen Ausgangspunkte auf den Parameter g schreibt und die alte Grafik löscht.
 
 
 2. Wozu dient der Parameter g?
