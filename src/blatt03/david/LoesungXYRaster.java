@@ -60,7 +60,7 @@ public class LoesungXYRaster extends JFrame {
                 } else {
                     g.setColor(Color.LIGHT_GRAY);
                 }
-                g.drawLine((n % 2 == 0) ? x25 + (x * ((x75 - x25) / 11)): x25,(n % 2 == 0) ? y25: y25 + (x * ((y75 - y25) / 11)), (n % 2 == 0) ? x25 + (x * (x75 - x25)/11): x75,(n % 2 == 0) ? y75:y25 + (x * ((y75-y25)/11)));
+                g.drawLine((n % 2 == 0) ? (int)(x25 + x * ((x75 - x25) / 10.0)): x25,(n % 2 == 0) ? y25: (int)(y25 + x * ((y75 - y25) / 10.0)), (n % 2 == 0) ? (int)(x25 + x * ((x75 - x25)/10.0)): x75,(n % 2 == 0) ? y75:(int)(y25 + x * ((y75-y25)/10.0)));
             }
 
         }
