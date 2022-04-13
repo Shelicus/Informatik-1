@@ -52,19 +52,21 @@ public class LoesungKegel extends JFrame {
         int x75 = this.getWidth() * 3 / 4;
         int y25 = this.getHeight() / 4;
         int y75 = this.getHeight() * 3 / 4;
+        double x50 = this.getWidth() / 2.0 / 40;
 
-        for (int i = x25; i < x75; i += (x75 - x25) / 40) {
-            if(i == x25) {
+        for (int i = 0; i < 40; i++) {
+            int drawX = (int) (i * x50);
+            if (i == x25) {
                 g.setColor(Color.black);
-            }
-            else{
+            } else {
                 g.setColor(Color.gray);
             }
-            g.drawLine(i,y25,x75+x25-i,y75);
+            g.drawLine(drawX + x25, y25, x75 - drawX, y75);
         }
         g.setColor(Color.black);
         g.drawLine(x25,y25,x75,y25);
         g.drawLine(x75,y25,x25,y75);
         g.drawLine(x25,y75,x75,y75);
+
     }
 }
