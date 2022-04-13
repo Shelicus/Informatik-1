@@ -51,8 +51,11 @@ public class LoesungXYRaster extends JFrame {
         int x75 = this.getWidth() * 3 / 4;  // x-Koordinate bei 75% der Fensterbreite (von links)
         int y25 = this.getHeight() / 4;        // y-Koordinate bei 25% der Fensterbreite (von oben)
         int y75 = this.getHeight() * 3 / 4; // y-Koordinate bei 75% der Fensterbreite (von oben)
+        double x50 = this.getWidth() / 2.0 /10;
+        double y50 = this.getHeight() / 2.0 / 10;
         boolean grau = false;
-        for (int i = x25; i <= x75; i += (x75 - x25) / 11) {
+        for (int i = 0; i <= 10; i++) {
+            int drawX = (x25 + (int)(i*x50));
             if (grau) {
                 g.setColor(Color.gray);
                 grau = false;
@@ -60,11 +63,12 @@ public class LoesungXYRaster extends JFrame {
                 g.setColor(Color.black);
                 grau = true;
             }
-            g.drawLine(i, y25, i, y75);
+            g.drawLine(drawX, y25, drawX, y75);
         }
 
 
-        for (int i = y25; i <= y75; i += (y75 - y25) / 11) {
+        for (int i = 0; i <= 10; i++) {
+            int drawY = y25 + (int)(i*y50);
             if (grau) {
                 g.setColor(Color.gray);
                 grau = false;
@@ -72,7 +76,7 @@ public class LoesungXYRaster extends JFrame {
                 g.setColor(Color.black);
                 grau = true;
             }
-            g.drawLine(x25, i, x75, i);
+            g.drawLine(x25, drawY, x75, drawY);
         }
     }
 }

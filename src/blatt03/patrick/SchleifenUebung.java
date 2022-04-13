@@ -7,7 +7,7 @@ public class SchleifenUebung {
         float endwert = 4f;
         float schrittweite = 0.5f;
         //quadratzahlen(startwert,endwert,schrittweite);
-        //trigonometry(startwert, endwert, schrittweite);
+        trigonometry(startwert, endwert, schrittweite);
 
     }
 
