@@ -1,4 +1,4 @@
-package blatt04;
+package blatt4.patrick;
 
 import java.awt.*;
 import javax.swing.JFrame;
