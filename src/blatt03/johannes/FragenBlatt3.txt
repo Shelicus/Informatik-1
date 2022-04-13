@@ -1,0 +1,12 @@
+13.3.1
+Aufgabe 3.2 Zwei Schlüsselwörter: new, class
+Aufgabe 3.3 Der Bytecode kann mit jeder beliebigen Virtual Java-Machnine verwendet werden.
+Aufgabe 3.4 Android-Code wird in Dalvik-Opcodes kompiliert. Davilk ist eine spezielle virtuelle Maschine.
+
+Aufgabe 3.9 Analysieren und Abändern
+1. Wozu dient die paint()-Methode? Die Methode zeichnet eine Grafik hier das Rechteck
+2. Der Parameter g ist von der Klasse Graphics ein Objekt g auf dieser Flaeche die Grafik gezeichnet werden kann.
+3. Der Code meiner Loesung soll in der Methode meine Diagonalen(Gaphics g) stehen. Unter den nach den TODO Kommentaren.
+5. Ein TODO Kommentar zeigt die zu implementierende Funktion an.
+Bsp. // TODO: Aufgabe Erinnert den Entwickler die Aufgaben nicht zu vergessen.
+Windows -> Show View -> Tasks
