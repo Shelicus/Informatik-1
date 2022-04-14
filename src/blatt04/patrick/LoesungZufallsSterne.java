@@ -73,7 +73,7 @@ public class LoesungZufallsSterne extends JFrame {
        for(int i = 0; i <=60; i++){
            int randomX = (int) (Math.random() * this.getWidth());
            int randomY = (int) (Math.random() * this.getHeight());
-           int randomR = (int) (Math.random() * 100);
+           int randomR = (int) ((Math.random()+ 1) * 50);
            this.zeichneEinenStern(g,randomX,randomY, randomR);
        }
    } 

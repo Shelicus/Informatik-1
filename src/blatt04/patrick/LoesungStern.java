@@ -42,7 +42,7 @@ public class LoesungStern extends JFrame {
    public void meinStern(Graphics g){
        int r = 50;
        int newR;
-       int n = 20;
+       int n = 40;
        double phi;
        int mittex = this.getWidth() / 2;
        int mittey = this.getHeight() / 2;
