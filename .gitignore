@@ -10,5 +10,6 @@
 /dataSources.local.xml
 /out/
 *.class
+/scr/*.class
 
 
