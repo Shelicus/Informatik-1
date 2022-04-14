@@ -35,10 +35,7 @@ public class LoesungZufallsSterne extends JFrame {
     public static void main(String[] args){
     	new LoesungZufallsSterne();
     }
-   
-	/** 
-	 * Bitte ab hier Lösung zum Zeichnen der zufälligen Sterne entwickeln.
-	 */
+
     /**
      * 1. Teilaufgabe: Methode, um einen Stern zu zeichnen.
      * 
@@ -48,7 +45,24 @@ public class LoesungZufallsSterne extends JFrame {
      * @param r Radius des Sterns
      */
     public void zeichneEinenStern(Graphics g, int midX, int midY, int r){
-    	// TODO Einen Stern mit gegebenen Parametern zeichnen
+        int newR;
+        int n = 50;
+        double phi;
+
+        for(int i = 0; i < n; i++){
+            phi = i * (2.0 * Math.PI) /n;
+            if(i % 2 == 0){
+                newR = r;
+                g.setColor(Color.blue);
+            }
+            else{
+                newR = r/2;
+                g.setColor(Color.magenta);
+            }
+            double drawX = Math.cos(phi) * newR;
+            double drawY = Math.sin(phi) * newR;
+            g.drawLine(midX,midY,midX + (int)(drawX), midY + (int)(drawY));
+        }
     }
     
     /**
@@ -56,6 +70,11 @@ public class LoesungZufallsSterne extends JFrame {
      */
    
    public void meineZufallsSterne(Graphics g){
-   	// TODO 60 Sterne zufällig groß und zufällig verteilt zeichnen
+       for(int i = 0; i <=60; i++){
+           int randomX = (int) (Math.random() * this.getWidth());
+           int randomY = (int) (Math.random() * this.getHeight());
+           int randomR = (int) (Math.random() * 100);
+           this.zeichneEinenStern(g,randomX,randomY, randomR);
+       }
    } 
 }

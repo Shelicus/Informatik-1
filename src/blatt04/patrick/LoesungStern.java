@@ -40,6 +40,25 @@ public class LoesungStern extends JFrame {
 	 * 
 	 */
    public void meinStern(Graphics g){
-	   // TODO
+       int r = 50;
+       int newR;
+       int n = 20;
+       double phi;
+       int mittex = this.getWidth() / 2;
+       int mittey = this.getHeight() / 2;
+
+       for(int i = 0; i < n; i++) {
+           phi = i * (2.0 * Math.PI) / n;
+           if (i % 2 == 0) {
+               newR = r;
+               g.setColor(Color.blue);
+           } else {
+               newR = r / 2;
+               g.setColor(Color.magenta);
+           }
+           double drawX = Math.cos(phi) * newR;
+           double drawY = Math.sin(phi) * newR;
+           g.drawLine(mittex, mittey, mittex + (int) (drawX), mittey + (int) (drawY));
+       }
    } 
 }
