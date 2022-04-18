@@ -67,9 +67,6 @@ Der Code soll unter den Kommentaren TODO geschrieben werden.
 
 5. Recherchieren Sie bitte, welche Bedeutung "// TODO-Kommentare"
 • in Java und
-
-
-
 • in Eclipse haben.
 
 Die Kommentare können aufgelistet werden und zeigen an wo noch gearbeitet werden muss in einer Taskbar.

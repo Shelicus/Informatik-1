@@ -3,6 +3,9 @@ package blatt04.david;
 import java.awt.*;
 import javax.swing.JFrame;
 
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
+
 /**
  * Klasse für das zufällige Zeichnen von Sternen
  */
@@ -47,15 +50,32 @@ public class LoesungZufallsSterne extends JFrame {
      * @param midY y-Koordinate des Mittelpunkts des Sterns
      * @param r Radius des Sterns
      */
+
     public void zeichneEinenStern(Graphics g, int midX, int midY, int r){
-    	// TODO Einen Stern mit gegebenen Parametern zeichnen
+
+        for(int x = 1; x < 49; x+=1){
+            if (x % 2  == 0) {
+                g.setColor(Color.BLUE);
+                g.drawLine(midX, midY, midX + (int) (cos(x * (1.0 * Math.PI) / 24) * r), midY + (int) ((sin(x * (1.0 * Math.PI) / 24) * r)));
+            }
+            else {
+                g.setColor(Color.MAGENTA);
+                g.drawLine(midX, midY, midX + (int) (cos(x * (1.0 * Math.PI) / 24) * (r/2)),  midY + (int) (sin(x * (1.0 * Math.PI) / 24) * (r/2)));
+            }
+
+        }
+
+
     }
-    
+
     /**
      * 2. Teilaufgabe: Sterne zufällig platzieren mit zufälligem Radius
      */
    
    public void meineZufallsSterne(Graphics g){
    	// TODO 60 Sterne zufällig groß und zufällig verteilt zeichnen
+       for (int x = 0; x < 90; x++) {
+           zeichneEinenStern(g, (int) (Math.random() * getWidth()), (int) (Math.random() * getHeight()), (int) ((Math.random() +1) * 50));
+       }
    } 
 }
