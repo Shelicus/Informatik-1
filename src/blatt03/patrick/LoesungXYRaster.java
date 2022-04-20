@@ -56,18 +56,6 @@ public class LoesungXYRaster extends JFrame {
         boolean grau = false;
         for (int i = 0; i <= 10; i++) {
             int drawX = (x25 + (int)(i*x50));
-            if (grau) {
-                g.setColor(Color.gray);
-                grau = false;
-            } else {
-                g.setColor(Color.black);
-                grau = true;
-            }
-            g.drawLine(drawX, y25, drawX, y75);
-        }
-
-
-        for (int i = 0; i <= 10; i++) {
             int drawY = y25 + (int)(i*y50);
             if (grau) {
                 g.setColor(Color.gray);
@@ -76,6 +64,7 @@ public class LoesungXYRaster extends JFrame {
                 g.setColor(Color.black);
                 grau = true;
             }
+            g.drawLine(drawX, y25, drawX, y75);
             g.drawLine(x25, drawY, x75, drawY);
         }
     }
