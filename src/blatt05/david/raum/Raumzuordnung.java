@@ -1,4 +1,4 @@
-package k04_types.class_examp;
+package blatt05.david.raum;
 
 import k04_types.Person;
 

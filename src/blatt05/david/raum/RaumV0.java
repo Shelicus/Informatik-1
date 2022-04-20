@@ -1,4 +1,4 @@
-package k04_types.class_examp;
+package blatt05.david.raum;
 
 /** Einfache Datenklasse für die Daten von Räumen (unschön, unsicher, aber einfach).  */
 public class RaumV0 { 
