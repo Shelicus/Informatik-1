@@ -74,7 +74,7 @@ public class LoesungZufallsSterne extends JFrame {
    
    public void meineZufallsSterne(Graphics g){
    	// TODO 60 Sterne zufällig groß und zufällig verteilt zeichnen
-       for (int x = 0; x < 90; x++) {
+       for (int x = 0; x < 60; x++) {
            zeichneEinenStern(g, (int) (Math.random() * getWidth()), (int) (Math.random() * getHeight()), (int) ((Math.random() +1) * 50));
        }
    } 

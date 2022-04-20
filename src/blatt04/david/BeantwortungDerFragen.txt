@@ -1,0 +1,11 @@
+13.4.1 Der Java Kompiliervorgang
+
+Aufgabe 4.2: Java-Programmierfehler selbst erkennen
+Finden Sie bitte in folgenden Java-Programmstücken den jeweiligen Fehler
+
+1) for(int i=0; i<10; i=i+1); ->  ; Falsche abgrenzung
+2) int k = 1; System.out.println(1/k); -> 1 darf nicht durch 0 geteilt werden, falsche Deklaration
+3) int i=0; if(i < 1) {i=i+1;} -> Fehlendes Schlüsselwort für einen Vergleich
+4) int i=0; while(i < 1) -> Es existiert kein unsigned Integer
+   {i=i+1;}
+5) long i=1; while(i < 0) {i=i+1;} -> Es wurde eine Dauerschleife erstellt
