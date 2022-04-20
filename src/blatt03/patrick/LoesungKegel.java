@@ -8,8 +8,6 @@ import javax.swing.JFrame;
  */
 public class LoesungKegel extends JFrame {
 
-    private int y75;
-
     /**
      * Konstruktor. Nichts zu ändern hier
      */
