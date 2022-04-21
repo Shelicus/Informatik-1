@@ -49,8 +49,8 @@ public class LoesungXYRaster extends JFrame {
 
 		int deltaX = x75 - x25;
 		int deltaY = y75 - y25;
-//		int stepX = deltaX / 10;
-//		int stepY = deltaY / 10;
+//		double stepX = deltaX / 10.0;
+//		double stepY = deltaY / 10.0;
 
 		/*
 		 * g.setColor(Color.RED); // Soll schwarz sein g.drawLine(x75, y25, x25,
@@ -64,12 +64,12 @@ public class LoesungXYRaster extends JFrame {
 //		// Alle geraden Zahlen
 //		   if(i % 2 == 0){
 //			   g.setColor(Color.RED);
-//			   g.drawLine(x25 + i * stepX, y25, x25 + i * stepX, y75);//vertical
-//			   g.drawLine(x25, y25 + i * stepY, x75, y25 + i * stepY);//horizontal
+//			   g.drawLine((int) (x25 + i * stepX), y25, (int) (x25 +  i * stepX), y75);//vertical
+//			   g.drawLine(x25, (int) y25 + i * stepY, x75, (int) y25 + i * stepY);//horizontal
 //		   } else {
 //			   g.setColor(Color.GRAY);
-//			   g.drawLine(x25 + i * stepX, y25, x25 + i * stepX, y75);//vertical
-//			   g.drawLine(x25, y25 + i * stepY, x75, y25 + i * stepY);//horizontal
+//			   g.drawLine((int) (x25 + i * stepX), y25, (int) (x25 + i * stepX), y75);//vertical
+//			   g.drawLine(x25, (int) (y25 + i * stepY), x75, (int) ((int) y25 + i * stepY));//horizontal
 //		   }
 //		
 //	   }
@@ -85,7 +85,7 @@ public class LoesungXYRaster extends JFrame {
 			g.drawLine(x25, y25 + (i * deltaY / 10), x75, y25 + (i * deltaY / 10));
 		}
 
-//	   for/*vertical lines*/(int j = x25; j < x75; j = j + stepX) {
+//	   for/*vertical lines*/(int j = x25; j < x75;(int) j = j + stepX) {
 //			   g.drawLine(j, y25, j, y75);
 //		   }
 //	   
