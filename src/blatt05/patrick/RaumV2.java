@@ -1,4 +1,4 @@
-package k04_types.class_examp;
+package blatt05.patrick;
 
 /** Klasse mit Vermeidung von falschen Daten durch Setter-Methoden */
 public class RaumV2 {

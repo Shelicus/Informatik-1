@@ -1,4 +1,4 @@
-package k04_types.class_examp;
+package blatt05.johannes;
 
 /** Die obige Klasse RaumV0 "funktioniert" zwar, hat aber erhebliche Mängel:
 	<ol>

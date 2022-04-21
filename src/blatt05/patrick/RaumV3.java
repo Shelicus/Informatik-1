@@ -1,4 +1,4 @@
-package k04_types.class_examp;
+package blatt05.patrick;
 
 /** Klasse mit Konstruktor, um Vollständigkeit der Daten sicherzustellen */
 public class RaumV3 {

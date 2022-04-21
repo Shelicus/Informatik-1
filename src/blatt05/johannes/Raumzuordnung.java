@@ -1,6 +1,4 @@
-package k04_types.class_examp;
-
-import k04_types.Person;
+package blatt05.johannes;
 
 /** Beispiel für Referenzen: Klasse für Mitarbeiter-Raumzuordnung */
 public class Raumzuordnung {

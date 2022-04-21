@@ -1,6 +1,6 @@
 package blatt05.david.raum;
 
-import k04_types.Person;
+//import k04_types.Person;
 
 /** Beispiel für Referenzen: Klasse für Mitarbeiter-Raumzuordnung */
 public class Raumzuordnung {

@@ -1,4 +1,4 @@
-package blatt05;
+package blatt05.patrick;
 
 public class DreiChinesen {
 	static final String text = 
@@ -16,7 +16,8 @@ public class DreiChinesen {
 	 *            Text mit mehreren Zeilen (durch '\n' abgetrennt)
 	 */
 	static void printCentered(String text) {
-		System.out.println(text); // TODO
+		String[] stringParts = text.split("");
+		System.out.println(stringParts[0]);
 	}
 
 	/**

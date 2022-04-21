@@ -1,4 +1,4 @@
-package k04_types.class_examp;
+package blatt05.patrick;
 
 /** "Normale" Klasse für Räume, mit Konstruktoren, Settern und Gettern */
 public class Raum {

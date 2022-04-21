@@ -1,4 +1,4 @@
-package blatt05;
+package blatt05.johannes;
 
 public class DreiChinesen {
 	static final String text = 
