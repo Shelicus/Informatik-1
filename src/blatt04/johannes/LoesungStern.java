@@ -40,6 +40,31 @@ public class LoesungStern extends JFrame {
 	 * 
 	 */
    public void meinStern(Graphics g){
-	   // TODO
+	   // TODO implement
+	   final int NUMBER_OF_POINTS = 64;
+	   final int RADIUS = 100;
+	   final int HALF_RADIUS = RADIUS / 2;
+	   final int X_START = this.getWidth() / 2;
+	   final int Y_START = this.getHeight() / 2;
+	   int radius;
+	   
+	   for (int i = 0; i < NUMBER_OF_POINTS; i = i + 1) {
+		   double phi = i * (2 * Math.PI) / NUMBER_OF_POINTS;
+		   
+		   
+		   if /*uneven number of lines*/ (i % 2 == 1) {
+			   radius = HALF_RADIUS;
+			   g.setColor(Color.MAGENTA);   
+		   } else /*even number of lines*/ {
+			   radius = RADIUS;
+			   g.setColor(Color.BLUE);   
+		   }
+		   
+		   double xCorrdinate = radius * Math.cos(phi);
+		   double yCorrdinate = radius * Math.sin(phi);
+		   
+		   g.drawLine(X_START, Y_START, X_START + (int)xCorrdinate, Y_START + (int)yCorrdinate);
+	   }
+	   
    } 
 }

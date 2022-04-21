@@ -49,6 +49,29 @@ public class LoesungZufallsSterne extends JFrame {
      */
     public void zeichneEinenStern(Graphics g, int midX, int midY, int r){
     	// TODO Einen Stern mit gegebenen Parametern zeichnen
+ 	   final int NUMBER_OF_POINTS = 64;
+ 	   final int RADIUS = r;
+ 	   final int HALF_RADIUS = RADIUS / 2;
+ 	   final int X_START = midY;
+ 	   int Y_START = midX;
+ 	   
+ 	   for (int i = 0; i < NUMBER_OF_POINTS; i = i + 1) {
+ 		   double phi = i * (2 * Math.PI) / NUMBER_OF_POINTS;
+ 		   int radius;
+ 		   
+ 		   if /*uneven number of lines*/ (i % 2 == 1) {
+ 			   radius = HALF_RADIUS;
+ 			   g.setColor(Color.MAGENTA);   
+ 		   } else /*even number of lines*/ {
+ 			   radius = RADIUS;
+ 			   g.setColor(Color.BLUE);   
+ 		   }
+ 		   
+ 		   double xCorrdinate = radius * Math.cos(phi);
+ 		   double yCorrdinate = radius * Math.sin(phi);
+ 		   
+ 		   g.drawLine(X_START, Y_START, X_START + (int)xCorrdinate, Y_START + (int)yCorrdinate);
+ 	   }
     }
     
     /**
@@ -57,5 +80,17 @@ public class LoesungZufallsSterne extends JFrame {
    
    public void meineZufallsSterne(Graphics g){
    	// TODO 60 Sterne zufällig groß und zufällig verteilt zeichnen
+	   this.zeichneEinenStern(g, 200, 300, 50); // test case!!!
+	   for (int i = 0; i < 60; i = i + 1) {
+		   double dx = Math.random() * this.getWidth();
+		   double dy = (int)(Math.random() * this.getHeight()); // (int) einklammern!
+		   int ix = (int) dx;
+		   int iy = (int) dy;
+ 		   //int iR = (int) Math.random();
+		   
+		   this.zeichneEinenStern(g, ix, iy, 50);
+		   
+	   }
+	   
    } 
 }
