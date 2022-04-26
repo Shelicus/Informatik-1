@@ -50,20 +50,20 @@ public class LoesungZufallsSterne extends JFrame {
     public void zeichneEinenStern(Graphics g, int midX, int midY, int r){
     	// TODO Einen Stern mit gegebenen Parametern zeichnen
  	   final int NUMBER_OF_POINTS = 64;
- 	   final int RADIUS = r;
- 	   final int HALF_RADIUS = RADIUS / 2;
- 	   final int X_START = midY;
- 	   int Y_START = midX;
+ 	   int fullRadius = r;
+ 	   int halfRadius = fullRadius / 2;
+ 	   int X_START = midX;
+ 	   int Y_START = midY;
+ 	   int radius;
  	   
  	   for (int i = 0; i < NUMBER_OF_POINTS; i = i + 1) {
  		   double phi = i * (2 * Math.PI) / NUMBER_OF_POINTS;
- 		   int radius;
  		   
  		   if /*uneven number of lines*/ (i % 2 == 1) {
- 			   radius = HALF_RADIUS;
+ 			   radius = halfRadius;
  			   g.setColor(Color.MAGENTA);   
  		   } else /*even number of lines*/ {
- 			   radius = RADIUS;
+ 			   radius = fullRadius;
  			   g.setColor(Color.BLUE);   
  		   }
  		   

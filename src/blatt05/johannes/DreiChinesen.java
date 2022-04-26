@@ -15,8 +15,45 @@ public class DreiChinesen {
 	 * @param text
 	 *            Text mit mehreren Zeilen (durch '\n' abgetrennt)
 	 */
-	static void printCentered(String text) {
-		System.out.println(text); // TODO
+	static void printCentered(String text){
+		if(text == null) {
+			//Error if(text.equals("null"))
+			System.err.println("Text is null!");
+		} else {
+			String[] lines = text.split("\n"); //Method split return an String[]
+			int maxChars = DreiChinesen.calculateMaximumCharsOfAllLines(lines);
+			
+			for(String printLine : lines) {
+				if(printLine.length() != maxChars) {
+					//calculate how many chars are left
+					int leftChars = (maxChars / 2) - (printLine.length() / 2);
+					//TODO: Clear String whitespace = " ";
+					String leftWhitespaces = "";
+					//leftWhitespaces  = whitespace * halfChars
+					for/*Creates a string with leftWitespaces*/(int j = 0; j < leftChars; j++) {
+						leftWhitespaces += " ";
+					}
+					System.out.println(leftWhitespaces + printLine);
+				} else {
+					System.out.println(printLine);	
+				}
+			}			
+		}
+	}
+	/**
+	 * @param lines
+	 * 			String already split into each line
+	 * @return number of characters of the line with the most characters
+	 */
+	public static int calculateMaximumCharsOfAllLines(String[] lines) {
+		int maxChars = 0;
+		//find the maximum characters of All lines
+		for (String line : lines) {
+			if (maxChars < line.length()) {
+				maxChars = line.length();	
+			}
+		}
+		return maxChars;
 	}
 
 	/**
@@ -33,9 +70,17 @@ public class DreiChinesen {
 	}
 
 	public static void main(String[] args) {
+//		TestCases
 		DreiChinesen.printCentered(text);
-		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "i"));
-		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "ü"));
+
+//		DreiChinesen.printCentered("Hey, hallo wie geht es dir ??? Mir gut");
+//		DreiChinesen.printCentered(" sjfjaspoifjoasjofijosadijofjasiodfijoasijfjoadsijfosifjioaijodfjio");
+//		DreiChinesen.printCentered("");
+//		//null funktioniert nicht! 
+//		DreiChinesen.printCentered(null);
+		
+//		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "i"));
+//		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "ü"));
 	}
 
 }
