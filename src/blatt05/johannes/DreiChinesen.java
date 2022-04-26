@@ -66,7 +66,13 @@ public class DreiChinesen {
 	 * @return Text mit geänderten Vokalen
 	 */
 	static String changeVowels(String text, String replacement) {
-		return text; // TODO
+		String changedText = "";
+		if(text == null || replacement == null) {
+			System.err.println("String or replacement is null! Null Pointer Exception");
+		} else { //replaces every character in brackets with the replacement and creats a new String-Object
+			changedText = new String(text.replaceAll("[aeiouäöüAEIOUÄÖÜ]", replacement));
+		}
+		return changedText;
 	}
 
 	public static void main(String[] args) {
@@ -79,8 +85,9 @@ public class DreiChinesen {
 //		//null funktioniert nicht! 
 //		DreiChinesen.printCentered(null);
 		
-//		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "i"));
-//		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "ü"));
+		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "i"));
+		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "ü"));
+//		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "?"));
 	}
 
 }
