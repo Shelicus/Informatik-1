@@ -20,6 +20,7 @@ public class DreiChinesen {
         for (String j : stringParts) {
             System.out.println(j);
         }
+        System.out.println("");
     }
 
     public static int searchGreatestString(String[] stringParts) {
@@ -60,7 +61,7 @@ public class DreiChinesen {
      * @return Text mit geänderten Vokalen
      */
     static String changeVowels(String text, String replacement) {
-        return text; // TODO
+        return text.replaceAll("[a,e,i,o,u]", replacement);
     }
 
     public static void main(String[] args) {
