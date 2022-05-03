@@ -1,5 +1,7 @@
 package blatt06.patrick;
 
+import java.util.Arrays;
+
 /**
  * Klasse zur Bearbeitung der Aufgaben vom Übungsblatt
  */
@@ -16,13 +18,28 @@ public class ArrayStatistik {
      * @param args
      */
     public static void main(String[] args) {
+
         berechneArithmetischesMittel(UNSER_ARRAY);
-        berechneArithmetischesMittel(RANDFALL_NEGATIV);
-        berechneArithmetischesMittel(RANDFALL_SORTIERT);
-        berechneArithmetischesMittel(RANDFALL_GLEICHE);
         sucheMinimumMaximum(UNSER_ARRAY);
         bildeMedian(UNSER_ARRAY);
         berechneErwartungswert(KFZ);
+
+        berechneArithmetischesMittel(RANDFALL_NEGATIV);
+        berechneArithmetischesMittel(RANDFALL_SORTIERT);
+        berechneArithmetischesMittel(RANDFALL_GLEICHE);
+
+        /*
+        sucheMinimumMaximum(RANDFALL_NEGATIV);
+        sucheMinimumMaximum(RANDFALL_SORTIERT);
+        sucheMinimumMaximum(RANDFALL_GLEICHE);
+         */
+
+        /*
+        bildeMedian(RANDFALL_NEGATIV);
+        bildeMedian(RANDFALL_SORTIERT);
+        bildeMedian(RANDFALL_GLEICHE);
+         */
+
     }
 
     /**
@@ -77,8 +94,7 @@ public class ArrayStatistik {
      */
     public static void bildeMedian(int[] numbers) {
         double median;
-        //TODO Sortiere das Array
-        //numbers.sort() ??? Warum funktioniert das nicht
+        Arrays.sort(numbers);
         if(numbers.length % 2 != 0) {
             median = numbers[(numbers.length / 2)];
         }
