@@ -49,9 +49,9 @@ public class DreiChinesen {
 	static String changeVowels(String text, String replacement) {
 		String[] umlaute = new String[] {"a","e","i","o","u"};
 		//Ersetzen der einzelnen Umlaute
-		for(int x = 0; x < umlaute.length; x++){
-			text = text.replace(umlaute[x], replacement);
-			}
+		for (String s : umlaute) {
+			text = text.replace(s, replacement);
+		}
 		return text;
 	}
 
