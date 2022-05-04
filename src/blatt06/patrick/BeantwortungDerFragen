@@ -1,0 +1,29 @@
+1. Was sind erlaubte Werte im Spielfeld?
+- Für das Spielfeld sollen nur Werte zwischen 0-9 erlaubt sein
+
+2. Welche Bedeutung hat die "0" dabei?
+- Die 0 steht dabei für einen leeren Eintrag in unserem Sudoku
+
+3. Warum ist die Reihung testSpielFelder dreidimensional?
+- Unser Sudoku ist schon zweidimensional. Da dieses Array nun mehrere Sudokus enthält, muss das Array die
+Dimension 3 haben.
+
+4. Was steht in der 1., 2. und 3. Dimension?
+- 1. "Auswahl" des Testsudokus
+- 2. "Auswahl" der Zeile im Sudoku 3er Block
+- 3. "Auswahl" der Spalte
+
+5. Welche Dimension hat die Reihung testFeld in der Methode
+testSudokuChecker?
+-Das Array testFeld hat die Dimension 2, weil wir aus unserem Array TestSpielFelder ein Sudoku herausnehmen. Das Sudoku
+hat immer Zeilen und Spalten, daher muss die Dimension 2 sein.
+
+6. In der Methode testSudokuChecker wird this.spielFeld[8][8] auf 8 geändert.
+    Ändert sich dadurch testSpielFelder auch? Wieso (nicht)?
+- Nein. Durch die Referenz "this.spielFeld = testFeld;" werden die Werte aus testSpielFelder in spielFeld kopiert.
+Es ändert sich nur das spielFeld, nicht aber das testFeld
+
+7. Wie/wieso funktioniert die For-Each-Schleife in der Methode
+testSudokuChecker? Was wird hier durchlaufen?
+- Die For-Each-Schleife iteriert über die drei Testfelder, die sich in Testspielfelder befinden. Es funktioniert, weil
+die Variable ein 2 dimensionales int Array ist.
