@@ -3,18 +3,17 @@ package blatt05.david.raum;
 //import k04_types.Person;
 
 /** Beispiel für Referenzen: Klasse für Mitarbeiter-Raumzuordnung */
-
-//public class Raumzuordnung {
-//	private Raum raum;		// Referenz auf Raum
-	//private Person nutzer;	// Referenz auf Nutzer/in
+public class Raumzuordnung {
+	private Raum raum;		// Referenz auf Raum
+	private Person nutzer;	// Referenz auf Nutzer/in
 	// TODO Grund für Zuordnung (z.B. "Büroraum", "Labor") als Zeichenkette ergänzen. 
 	//		Darf nicht NULL sein und muss mindestens aus 3 Zeichen bestehen. 
 	//		Bitte auch passende Zugriffsmethode und zusätzlichen Konstruktor 
 	//		mit Zuordnungsgrund hinzufügen.
 	
 	/** Konstruktor */
-/*	public Raumzuordnung(Raum raum, Person nutzer) {
-		 TODO: prüfen, dass jeweils nicht null
+	public Raumzuordnung(Raum raum, Person nutzer) {
+		// TODO: prüfen, dass jeweils nicht null
 		this.raum = raum; this.nutzer = nutzer;
 	}
 	
@@ -57,4 +56,3 @@ package blatt05.david.raum;
 	}
 
 }
- **/

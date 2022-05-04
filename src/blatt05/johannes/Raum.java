@@ -42,11 +42,13 @@ public class Raum {
 	/** Anzahl der Plätze setzen */
 	public void setAnzahlPlaetze(int plaetze) {
 		final int MINIMUM = 1;
+		final int MAXIMUM = 200;
 		if(plaetze < MINIMUM) {
 			System.err.println("Die Anzahl der Plätze muss größer als " + 
 					(MINIMUM - 1) + " sein." );
-		} // TODO Prüfung gegen Maximum 
-		else {
+		} else if(plaetze > MAXIMUM) { // TODO Prüfung gegen Maximum!
+			System.err.println("Die Anzahl der Plaetze muss kleiner als " + MAXIMUM + " sein!");
+		} else {
 			this.anzahlPlaetze = plaetze;
 		}
 	}
