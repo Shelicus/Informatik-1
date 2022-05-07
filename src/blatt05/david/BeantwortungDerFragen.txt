@@ -1,0 +1,5 @@
+Die Bilder 8.1a und 8.1b (Skript S. 107) stellen eine Metapher für Klassen und Objekte dar.
+Repräsentieren die Kekse dabei Klassen oder Objekte?
+
+Die Kekse repräsentieren hierbei die einzelnen Objekte die von den Ausstechern (Funktionen) geformt werden.
+Die Klassen beihalten funktionen die die Kekse formen.

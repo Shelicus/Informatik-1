@@ -17,7 +17,7 @@ public class Raum {
 		this.hatAudio = hatAudio;
 	}
 	
-	/** Alternativer Konstruktor: Kürzel aus  Kürzel für Gebäudenamen und Raumnummer bauen
+	/** Alternativer Konstruktor: Kürzel aus Kürzel für Gebäudenamen und Raumnummer bauen
 	 *  @param gebaeudeKuerzel Kürzel des Gebäudes, z.B. "E", "F", "SH", "LI"
 	 *  @param anzahlPlaetze Anzahl der Plätze in diesem Raum
 	 *  */
