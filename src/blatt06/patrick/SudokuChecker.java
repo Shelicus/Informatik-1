@@ -159,7 +159,15 @@ public class SudokuChecker {
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isBlockOk(int zeile, int spalte, int wert) {
-		// TODO
+		int normierteZeile = zeile / BLOCK_SIZE * BLOCK_SIZE;
+		int normierteSpalte = spalte / BLOCK_SIZE * BLOCK_SIZE;
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				boolean ausdruck = (spielFeld[i+normierteZeile][j+normierteSpalte]) == wert;
+				if (ausdruck)
+					return false;
+			}
+		}
 		return true;
 	}
 	
