@@ -26,7 +26,10 @@ public class TernarySalutation {
 	 */
 	static String salutation(boolean onFirstNameBase, boolean signature, String given, String name, String signatureText)
 	{
-		return "tschüss!"; // TODO
+		String output;
+		output = onFirstNameBase ? "Viele Grüße \n" + given : "Mit freundlichen Grüßen \n" + given + " " + name;
+		output += signature ? "\n" + "------------------- \n" + signatureText : "";
+		return output;
 
 	}
 	
