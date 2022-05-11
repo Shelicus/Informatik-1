@@ -85,30 +85,24 @@ public class SimplifyOrTransform {
 
         String seite;
         switch (zufallsZahl) {
-            case 1: {
+            case 1:
                 seite = "Eins";
                 break;
-            }
-            case 2: {
+            case 2:
                 seite = "Zwei";
                 break;
-            }
-            case 3: {
+            case 3:
                 seite = "Drei";
                 break;
-            }
-            case 4: {
+            case 4:
                 seite = "Vier";
                 break;
-            }
-            case 5: {
+            case 5:
                 seite = "Fünf";
                 break;
-            }
-            case 6: {
+            case 6:
                 seite = "Sechs";
                 break;
-            }
             case default:
                 seite = "Ungültig";
 

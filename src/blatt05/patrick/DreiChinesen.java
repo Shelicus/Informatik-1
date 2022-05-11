@@ -37,7 +37,6 @@ public class DreiChinesen {
 					theGreatest = true;
 				else
 					theGreatest = false;
-
 			}
 			if (theGreatest)
 				return i;

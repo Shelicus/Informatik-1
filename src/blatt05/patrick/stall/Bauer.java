@@ -14,6 +14,7 @@ public class Bauer {
      * @param name
      */
     public Bauer(String name) {
+
         this.name = name;
     }
 
