@@ -68,7 +68,7 @@ public class DreiChinesen {
 	 * @return Text mit geänderten Vokalen
 	 */
 	static String changeVowels(String text, String replacement) {
-		return text.replaceAll("[a,e,i,o,u]", replacement);
+		return text.replaceAll("[AEIOUaeiou]", replacement);
 	}
 
 	public static void main(String[] args) {

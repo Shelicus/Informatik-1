@@ -41,7 +41,7 @@ public class Bauer {
      * Berechnet, ob es noch Hühner gibt, die hungrig sind
      * @return Anzahl der hungrigen Hühner
      */
-    public int berechneAnzahlHungrigerHuehner() {
+    public static int berechneAnzahlHungrigerHuehner() {
         return Huhn.getAnzahlHuehner() - Bauer.anzahlGefuetterterHuehner;
 
     }

@@ -7,8 +7,9 @@ package blatt05.patrick.stall;
  */
 public class Huhn {
     private final String name;
-    private boolean hungrig;
+    private boolean hungrig = true;
     private static int anzahlHuehner;
+
 
     /**
      * Public-Konstruktor für die Klasse Huhn
@@ -16,7 +17,6 @@ public class Huhn {
      */
     public Huhn(String name) {
         this.name = name;
-        hungrig = true;
         anzahlHuehner++;
 
     }
@@ -52,4 +52,5 @@ public class Huhn {
     public void setHungrig(boolean hungrig) {
         this.hungrig = hungrig;
     }
+
 }

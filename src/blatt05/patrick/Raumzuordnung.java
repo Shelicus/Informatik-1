@@ -15,7 +15,7 @@ public class Raumzuordnung {
 
 	/** Konstruktor */
 	public Raumzuordnung(Raum raum, Person nutzer, String zuordnung) {
-		if(raum == null || nutzer == null || zuordnung.length() < 2) {
+		if(raum == null || nutzer == null || zuordnung == null || zuordnung.length() < 2) {
 			System.err.println("Fehler");
 		}
 		else {
@@ -62,7 +62,7 @@ public class Raumzuordnung {
 	public static void main(String[] a) {
 		// Bröckl nutzt den Raum E 212a
 		Person ub = new Person("Ulrich", "Bröckl");
-		Raum e212a = new Raum("e 212a", 2);
+		Raum e212a = new Raum("e 212a", 5);
 		Raumzuordnung ub2e212a = new Raumzuordnung(e212a, ub, "im Büro");
 		ub2e212a.print();
 
