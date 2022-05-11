@@ -63,7 +63,7 @@ public class Raumzuordnung {
 		// Bröckl nutzt den Raum E 212a
 		Person ub = new Person("Ulrich", "Bröckl");
 		Raum e212a = new Raum("e 212a", 5);
-		Raumzuordnung ub2e212a = new Raumzuordnung(e212a, ub, "im Büro");
+		Raumzuordnung ub2e212a = new Raumzuordnung(e212a, ub, "als Büro");
 		ub2e212a.print();
 
 		// Bröckl nutzt außerdem den Raum E 201
@@ -79,7 +79,7 @@ public class Raumzuordnung {
 		// Vogelsang nutzt den Raum E 209
 		Raumzuordnung hv2e209 = new Raumzuordnung(
 				new Raum("e 209", 3),
-				new Person("Holger", "Vogelsang"), "im Büro");
+				new Person("Holger", "Vogelsang"), "als Büro");
 		hv2e209.print();
 
 	}
