@@ -88,22 +88,28 @@ public class SimplifyOrTransform {
             case 1:
                 seite = "Eins";
                 break;
+
             case 2:
                 seite = "Zwei";
                 break;
+
             case 3:
                 seite = "Drei";
                 break;
+
             case 4:
                 seite = "Vier";
                 break;
+
             case 5:
                 seite = "Fünf";
                 break;
+
             case 6:
                 seite = "Sechs";
                 break;
-            case default:
+
+            default:
                 seite = "Ungültig";
 
 
