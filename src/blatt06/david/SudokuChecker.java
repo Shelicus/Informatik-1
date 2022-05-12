@@ -98,6 +98,8 @@ public class SudokuChecker {
 			this.print();
 			System.out.println("Falscher Wert auf [8][8] ...");
 			this.validiereSpielfeld();
+
+			System.out.println(testSpielFelder[1][8][8]);
 			
 			this.spielFeld[8][8]  = 8; 
 			this.print();

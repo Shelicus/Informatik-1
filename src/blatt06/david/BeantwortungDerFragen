@@ -1,0 +1,40 @@
+Aufgabe 6.4: Programm installieren und studieren
+
+1. Was sind erlaubte Werte im Spielfeld?
+
+In jedem 3*3 Block darf die Zahl 1 bis 9 jeweils genau nur einmal vorkommen
+
+
+2. Welche Bedeutung hat die "0" dabei?
+
+Die Null steht für einen leeren Eintrag im Feld
+
+
+3. Warum ist die Reihung testSpielFelder dreidimensional?
+
+Weil diese unterteilt wurde in drei Listen von Sudoku mit jeweils deren Anzahl an Zeilen
+
+
+4. Was steht in der 1., 2. und 3. Dimension?
+
+3. Spielfeld
+2. Zeile
+1. Position in der Zeile
+
+
+5. Welche Dimension hat die Reihung testFeld in der Methode
+testSudokuChecker?
+
+Das testFeld enthält immer ein Spielfeld mit deren Zeilen der 2 Dimension
+
+
+6. In der Methode testSudokuChecker wird this.spielFeld[8][8] auf
+8 geändert. Ändert sich dadurch testSpielFelder auch? Wieso (nicht)?
+
+Ja, weil this.spielFeld nur eine Zeiger auf das testSpielFelder ist
+
+
+7. Wie/wieso funktioniert die For-Each-Schleife in der Methode
+testSudokuChecker? Was wird hier durchlaufen?
+
+Hier wird aus testSpielFelder eins der Felder mit int[][] testFeld raus genommen.

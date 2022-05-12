@@ -121,13 +121,16 @@ public class SudokuChecker{
 	
 	/**
 	 * Pruefen, ob ein gegebener Wert an gegebener Position in einer Zeile erlaubt ist.
-	 * 
+	 *
+	 * @author David Schell
 	 * @param zeile Zeile, in der der Wert geprueft wird
 	 * @param wert Wert, der noch nicht in der Zeile vorhanden sein darf
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isZeileOk(int zeile, int wert) {
-		// TODO		
+		for(int i : this.spielFeld[zeile]){
+			if(wert == i) return false;
+		}
 		return true;
 	}
 
