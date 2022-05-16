@@ -23,7 +23,7 @@ public class SimplifyOrTransform {
         a = b++ - (b += 2) - (b = 0);
         // Vereinfacht:
         b = 3;
-        a = b--;
+        a = b-2;
 
         // Ändern Sie bitte ab auf, wo passend, Dekrement/Inkement-Opratoren
         // oder kombinierte Zuweisungsoperatoren (jeweils ohne die Ausgabe zu ändern ...)

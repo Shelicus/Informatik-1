@@ -1,6 +1,7 @@
 package blatt07.patrick;
 
 public class TernarySalutation {
+
 	/**
 	 * Alle möglichen Grußformeln ausgeben 
 	 */
@@ -30,7 +31,6 @@ public class TernarySalutation {
 		output = onFirstNameBase ? "Viele Grüße \n" + given : "Mit freundlichen Grüßen \n" + given + " " + name;
 		output += signature ? "\n" + "------------------- \n" + signatureText : "";
 		return output;
-
 	}
 	
 	public static void main(String[] args) {
