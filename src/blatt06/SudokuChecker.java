@@ -137,7 +137,7 @@ public class SudokuChecker{
 	
 	/**
 	 * Pruefen, ob ein gegebener Wert in einer Spalte erlaubt ist.
-	 * @author Patrick Pira
+	 * @author Johannes Unger
 	 * @param spalte Spalte, in der der Wert geprueft wird
 	 * @param wert Wert, der noch nicht in der Spalte vorhanden sein darf
 	 * @return true, falls Wert noch nicht vorhanden.
@@ -154,7 +154,7 @@ public class SudokuChecker{
 	
 	/**
 	 * Pruefen, ob ein gegebener Wert in einem Block erlaubt ist.
-	 * @author Johannes Unger
+	 * @author Patrick Pira
 	 * @param zeile Zeile, in der der Wert geprueft wird
 	 * @param spalte Spalte, in der der Wert geprueft wird
 	 * @param wert Wert, der noch nicht in dem Block vorhanden sein darf
