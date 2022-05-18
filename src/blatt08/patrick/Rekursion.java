@@ -7,12 +7,22 @@ public class Rekursion {
 
     public static void main(String[] args) {
         //TODO Fehlerüberprüfung
-        long n = Integer.parseInt(args[0]);
-        prt1234(n);
-        prtSqr1234(4);
-        prt2468(9);
-        xxx(5);
-        alternativeXXX(5);
+        long n;
+        try {
+
+            n = Integer.parseInt(args[0]);
+        }
+        catch(Exception e){
+            System.err.println(args[0] + " is not a number!");
+            n = 0;
+        }
+        if (n > 0) {
+            prt1234(n);
+            prtSqr1234(n);
+            prt2468(n);
+            xxx(n);
+            alternativeXXX(n);
+        }
     }
 
     static void prt1234(long n) {
@@ -53,9 +63,9 @@ public class Rekursion {
             System.out.print(n);
             xxx(n-1);
         }
-        else {
+        else {// Rekursionsbasis
             System.out.println();
-        } // Rekursionsbasis
+        }
     }
 
     static void alternativeXXX(long n) {
