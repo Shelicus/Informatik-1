@@ -24,10 +24,21 @@ public class TernarySalutation {
 	 * @param name Nachname
 	 * @param signatureText Signatur
 	 */
+	static String salutation2(boolean onFirstNameBase, boolean signature, String given, String name, String signatureText)
+	{
+		if(onFirstNameBase && signature) return "Mit freundlichen Grüßen\n"+ given + " " + name + "\n-------------\n" + signatureText;
+		else if(onFirstNameBase && !signature) return "Mit freundlichen Grüßen\n" + given + " "  + name;
+		else if(!onFirstNameBase && signature) return "Viele Grüße\n" + given;
+		else if(!onFirstNameBase && !signature) return "Viele Grüße\n" + given + "\n-------------\n" + signatureText;
+		return null;
+	}
+
 	static String salutation(boolean onFirstNameBase, boolean signature, String given, String name, String signatureText)
 	{
-		return "tschüss!"; // TODO
-
+		String re, re2;
+		re = (!onFirstNameBase) ?  "Mit freundlichen Grüßen\n"+ given + " " + name + "\n": "Viele Grüße\n" + given + "\n";
+		re2 = (signature) ? "-------------\n"+ signatureText : "";
+		return re + re2;
 	}
 	
 	public static void main(String[] args) {
