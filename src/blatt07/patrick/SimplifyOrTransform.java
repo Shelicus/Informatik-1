@@ -1,5 +1,7 @@
 package blatt07.patrick;
 
+import java.sql.SQLOutput;
+
 public class SimplifyOrTransform {
 
     /**
@@ -21,9 +23,11 @@ public class SimplifyOrTransform {
         b = a = 1;
 
         a = b++ - (b += 2) - (b = 0);
+        System.out.println(a);
+        System.out.println(b);
         // Vereinfacht:
-        b = 3;
-        a = b-2;
+        b = 0;
+        a = -3;
 
         // Ändern Sie bitte ab auf, wo passend, Dekrement/Inkement-Opratoren
         // oder kombinierte Zuweisungsoperatoren (jeweils ohne die Ausgabe zu ändern ...)
@@ -55,8 +59,9 @@ public class SimplifyOrTransform {
 
         // Formen Sie bitte die folgende while-Schleifen in for-Schleifen um
         // und verwenden Sie wieder Inkrementoperatoren/kombinierte Zuweisungsoperatoren
-        a = 1;
+        //a = 1;
         final int NMAX = 10;
+        /*
         while (a < NMAX) {
             b = 1;
             while (b < NMAX) {
@@ -67,7 +72,16 @@ public class SimplifyOrTransform {
             a += 1;
         }
 
-        System.out.println();
+         */
+
+        for (a = 1; a < NMAX; a++) {
+            for (b = 1; b < NMAX; b++) {
+                System.out.printf("%3d", a * b);
+            }
+            System.out.println();
+        }
+
+        /*
         a = 3;
         while (a < 100) {
             b = 2;
@@ -78,6 +92,15 @@ public class SimplifyOrTransform {
                 System.out.print(a + ", ");
             }
             a += 2;
+        }
+
+         */
+
+        for (a = 3; a < 100; a += 2) {
+            for (b = 2; b * b < a && a % b != 0; b++) {
+                if (b * b > a)
+                    System.out.print(a + ", ");
+            }
         }
 
         // Transformieren Sie bitte folgende If-/Else-Kette in eine Switch-Anweisung

@@ -5,8 +5,10 @@ public class Rekursion {
     static int zaehlerQuadrat = 1;
     static int zaehlerGerade = 2;
 
-    public static void main(String[]args) {
-        prt1234(4);
+    public static void main(String[] args) {
+        //TODO Fehlerüberprüfung
+        long n = Integer.parseInt(args[0]);
+        prt1234(n);
         prtSqr1234(4);
         prt2468(9);
         xxx(5);
