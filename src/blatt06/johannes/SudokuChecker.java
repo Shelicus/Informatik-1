@@ -167,7 +167,10 @@ public class SudokuChecker {
 		// TODO muessen sinnvolle Werte sein!
 		boolean isOk = true;
 		/* ermittle Block */
-		for (int i = 0, zeileBlock = (zeile / 3) * 3; i < this.BLOCK_SIZE; i++, zeileBlock += 1) {
+		int norm = (zeile / 3) * 3;
+		int zeileBlock = norm;
+
+		for (int i = 0 ; zeileBlock < norm + this.BLOCK_SIZE; i++, zeileBlock += 1) {
 			for (int j = 0, spalteBlock = (spalte / 3) * 3; j < this.BLOCK_SIZE; j++, spalteBlock++) {
 				if (wert == this.spielFeld[zeileBlock][spalteBlock]) {
 					isOk = false;

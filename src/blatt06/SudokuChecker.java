@@ -147,6 +147,7 @@ public class SudokuChecker{
 		for (int iZeile = 0; iZeile < this.ROW_SIZE; iZeile++) {
 			if (wert == this.spielFeld[iZeile][spalte]) {
 				isOk = false;
+				break;
 			}
 		}
 		return isOk;

@@ -13,6 +13,7 @@ enum KartenFarbe {
 class KartenSpiel{
     public static void main(String[] args) {
 
+        farbenWert(KartenFarbe.KREUZ);
     }
     static int farbenWert(KartenFarbe farbe) {
         int farbenWert;

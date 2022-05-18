@@ -36,11 +36,11 @@ class MethodenUebung {
     }
 
     static double kleinsteZahl(double[] zahlen){
-        double groesteZahl = zahlen[0];
+        double superior = zahlen[0];
         for(int i = 1; i < zahlen.length; i++)
-            if(groesteZahl > zahlen[i])
-                groesteZahl = zahlen[i];
-        return groesteZahl;
+            if(superior > zahlen[i])
+                superior = zahlen[i];
+        return superior;
     }
 
 }
