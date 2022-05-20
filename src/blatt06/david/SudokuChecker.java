@@ -159,8 +159,7 @@ public class SudokuChecker {
 		}
 		return true;
 	}
-	
-	
+
 	/**
 	 * Ein Sudoku pruefen, ob keine Werte doppelt in Zeilen, Spalten oder Bloecken auftauchen.
 	 * Falls doch, einfach ausgeben, wo das der Fall ist.
