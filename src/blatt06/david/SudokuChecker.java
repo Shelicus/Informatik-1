@@ -116,11 +116,8 @@ public class SudokuChecker {
 	 * @param wert Wert, in 1 ... ROW_SIZE sein soll
 	 * @return true, falls Wert in Ordnung
 	 */
-	private boolean isValueOk(int wert) {
-		return true; // TODO
-	}
-	
-	
+	private boolean isValueOk(int wert) {return wert <= 9 && wert >= 1;}
+
 	/**
 	 * Pruefen, ob ein gegebener Wert an gegebener Position in einer Zeile erlaubt ist.
 	 * 
@@ -129,7 +126,7 @@ public class SudokuChecker {
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isZeileOk(int zeile, int wert) {
-		// TODO		
+		for(int x : this.spielFeld[zeile]){if(wert == x) return false;}
 		return true;
 	}
 
@@ -142,7 +139,7 @@ public class SudokuChecker {
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isSpalteOk(int spalte, int wert) {
-		// TODO
+		for(int x = 0; x < ROW_SIZE; x++){if(wert == this.spielFeld[x][spalte]) return false;}
 		return true;
 	}
 	
@@ -155,7 +152,11 @@ public class SudokuChecker {
 	 * @return true, falls Wert noch nicht vorhanden.
 	 */
 	private boolean isBlockOk(int zeile, int spalte, int wert) {
-		// TODO
+		for(int spaltenNummer = BLOCK_SIZE * (spalte / BLOCK_SIZE); spaltenNummer < BLOCK_SIZE + BLOCK_SIZE * (spalte / BLOCK_SIZE) ; spaltenNummer++){
+			for(int zeilenNummer = BLOCK_SIZE * (zeile / BLOCK_SIZE);  zeilenNummer < BLOCK_SIZE + BLOCK_SIZE * (zeile / BLOCK_SIZE); zeilenNummer++){
+				if(wert == this.spielFeld[zeilenNummer][spaltenNummer]) return false;
+			}
+		}
 		return true;
 	}
 	
