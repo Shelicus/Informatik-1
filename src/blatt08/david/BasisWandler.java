@@ -1,4 +1,3 @@
-	
 package blatt08.david;
 
 public class BasisWandler {
@@ -39,7 +38,10 @@ public class BasisWandler {
 	 * @return Zeichenkette mit einzelnen Ziffern 0 ... 9, A, ..., Z
 	 */
 	String inBasisKwandeln(long n, int k)  {
-		return "AFFE"; // TODO Rekursive Lösung für Basiswandel
+		String zahl = "";
+		if (n <= 0L) return "-";
+		else zahl += inBasisKwandeln(n / k, k) + intNachZiffer((int)(n%k));
+		return zahl;
 	}
 
 	public static void main(String[] args) {
