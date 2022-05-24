@@ -39,8 +39,7 @@ public class BasisWandler {
 	 */
 	String inBasisKwandeln(long n, int k)  {
 		String zahl = "";
-		if (n <= 0L) return "-";
-		else zahl += inBasisKwandeln(n / k, k) + intNachZiffer((int)(n%k));
+		if (n > 0L) zahl += inBasisKwandeln(n / k, k) + intNachZiffer((int)(n%k));
 		return zahl;
 	}
 
