@@ -10,7 +10,7 @@ public class SimplifyOrTransform {
 		// Beispiel: Mehrfache Initialisierung mit dem selben Wert:
 		a = 0; b = 0; c = 0;
 		// Vereinfacht:
-		a = b = c = 0; 
+		a = b = c = 0;
 		
 		a = (b = 1 + (c = 0));
 		// Vereinfacht:
@@ -18,10 +18,13 @@ public class SimplifyOrTransform {
 		c = 0;
 		a = b = 1;
 		
+		a = b = 0;
 		a = b++ - (b += 2) - (b = 0);
 		// Vereinfacht:
 		//TODO 2 - (3+2) - 0; Assoziativitaet pruefen
-		a = b - 4;
+		// a = b - (b + 3) - 0
+		a = b - (b+3);// a = a - 2;
+		b = 0;
 		
 		// Ändern Sie bitte ab auf, wo passend, Dekrement/Inkement-Opratoren 
 		// oder kombinierte Zuweisungsoperatoren (jeweils ohne die Ausgabe zu ändern ...)
@@ -46,7 +49,7 @@ public class SimplifyOrTransform {
 		}
 
 		System.out.println();//int i = N0 + 1; i < N1 * N1; i = i + i
-		for(int i = N0 + 1; i < N1 * N1; i += i) {
+		for(int i = N0 + 1; i < N1 * N1; i *= 2) {
 			System.out.print(i + ", ");
 		}
 		System.out.println();
