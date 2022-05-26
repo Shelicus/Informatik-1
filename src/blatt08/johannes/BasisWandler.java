@@ -39,10 +39,21 @@ public class BasisWandler {
 	 * @return Zeichenkette mit einzelnen Ziffern 0 ... 9, A, ..., Z
 	 */
 	String inBasisKwandeln(long n, int k)  {
-		return "AFFE"; // TODO Rekursive Lösung für Basiswandel
+		String ret = "";
+		int rest;
+		if(n <= 0L){ // Rekursionsbasis
+			System.out.println();
+		}
+		else { 
+			ret += inBasisKwandeln(n / k, k);
+			rest = (int) (n % k);
+			ret += intNachZiffer(rest);
+		}
+		return ret;
 	}
 
 	public static void main(String[] args) {
+		
 		BasisWandler bwr = new BasisWandler();
 
 		Object[][] tests = { 

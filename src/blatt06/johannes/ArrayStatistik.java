@@ -74,6 +74,7 @@ public class ArrayStatistik {
 	 * 		of type int			
 	 */
 	public static int calculateMedian(int[] array) {
+		
 		Arrays.sort(array);
 		int median;
 		if/*even number of elements*/(array.length % 2 == 0) {
