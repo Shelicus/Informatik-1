@@ -3,6 +3,7 @@ package blatt08.david;
 public class MethodenUebung {
 
     public static float betragEinerZahl(float zahl){return (zahl > 0) ? zahl: zahl * -1;}
+    public static float betragEinerZahl2(float zahl){return Math.abs(zahl);}
     public static double aufrundenZurGanzenZahl(double zahl){return Math.ceil(zahl);}
     public static double abrundenZurGanzenZahl(double zahl){return Math.floor(zahl);}
     public static boolean restlosTeilbar(float zahl, float teiler){return zahl % teiler == 0;}
