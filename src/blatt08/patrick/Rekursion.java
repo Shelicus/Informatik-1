@@ -1,59 +1,57 @@
 package blatt08.patrick;
 
 public class Rekursion {
-    static int zaehler = 1;
-    static int zaehlerQuadrat = 1;
-    static int zaehlerGerade = 2;
+
 
     public static void main(String[] args) {
         //TODO Fehlerüberprüfung
         long n;
         try {
-
             n = Integer.parseInt(args[0]);
         }
         catch(Exception e){
             System.err.println(args[0] + " is not a number!");
-            n = 0;
+            return;
         }
-        if (n > 0) {
             prt1234(n);
+        System.out.println();
             prtSqr1234(n);
+        System.out.println();
             prt2468(n);
+        System.out.println();
             xxx(n);
             alternativeXXX(n);
-        }
     }
 
     static void prt1234(long n) {
-        if (zaehler >= n)
-            System.out.println(zaehler);
+        if (n == 1)
+            System.out.print(n);
         else {
-            System.out.print(zaehler + ", ");
-            zaehler++;
-            prt1234(n);
+            prt1234(n-1);
+            System.out.print(", " + n);
         }
 
     }
 
     static void prtSqr1234(long n) {
-        if (zaehlerQuadrat >= n)
-            System.out.println(zaehlerQuadrat * zaehlerQuadrat);
+        if ( n == 1)
+            System.out.print(n * n);
         else {
-            System.out.print(zaehlerQuadrat * zaehlerQuadrat + ", ");
-            zaehlerQuadrat++;
-            prtSqr1234(n);
+            prtSqr1234(n-1);
+            System.out.print(", " + n*n);
         }
 
     }
 
     static void prt2468(long n) {
-        if (zaehlerGerade >= n || zaehlerGerade >= n - 1 && n % 2 == 1)
-            System.out.println(zaehlerGerade);
-        else {
-            System.out.print(zaehlerGerade + ", ");
-            zaehlerGerade += 2;
-            prt2468(n);
+        if (n == 2) {
+            System.out.print(n);
+        }
+        else if (n % 2 == 1)
+            prt2468(n-1);
+        else{
+            prt2468(n-2);
+            System.out.print(", " + n);
         }
 
     }

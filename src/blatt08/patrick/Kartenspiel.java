@@ -9,7 +9,7 @@ class KartenSpiel {
     }
 
     static int farbenWert(KartenFarbe farbe) {
-        int farbenWert;
+        int farbenWert = 0;
         switch (farbe) {
             case KARO:
                 farbenWert = 9;
@@ -26,9 +26,6 @@ class KartenSpiel {
             case KREUZ:
                 farbenWert = 12;
                 break;
-
-            case default:
-                farbenWert = 0;
         }
         return farbenWert;
     }

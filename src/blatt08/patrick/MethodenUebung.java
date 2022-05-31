@@ -5,7 +5,7 @@ class MethodenUebung {
         System.out.println(berechneBetrag(-2));
         System.out.println(rundeHoch(-2.1));
         System.out.println(rundeAb(2.9));
-        System.out.println(DurchZahlRestlosTeilbar(9, 3));
+        System.out.println(durchZahlRestlosTeilbar(9, 3));
         System.out.println(berechneEuklidscheDistanz(new double[]{0, 0}, new double[]{2, 2}));
         System.out.println(kleinsteZahl(new double[]{10, 5, 100}));
     }
@@ -15,14 +15,14 @@ class MethodenUebung {
     }
 
     static int rundeHoch(double zahl) {
-        return (zahl > 0) ? (int) (zahl + 1) : (int) (zahl - 1);
+        return (int) (zahl + 1);
     }
 
     static int rundeAb(double zahl) {
         return (int) Math.floor(zahl);
     }
 
-    static boolean DurchZahlRestlosTeilbar(double zahl, double divisor) {
+    static boolean durchZahlRestlosTeilbar(double zahl, double divisor) {
         return zahl % divisor == 0;
     }
 
@@ -32,7 +32,7 @@ class MethodenUebung {
      * @return Abstand zwischen zwei Punkten in double
      */
     static double berechneEuklidscheDistanz(double[] punkt1, double[] punkt2) {
-        return punkt2[0] - punkt1[0] / punkt2[1] - punkt1[1];
+        return Math.sqrt(Math.pow(punkt2[0] - punkt1[0],2)+ Math.pow(punkt2[1] - punkt1[1],2));
     }
 
     static double kleinsteZahl(double[] zahlen) {
