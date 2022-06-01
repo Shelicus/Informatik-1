@@ -225,7 +225,6 @@ public class SudokuSolver {
         nrOfSolutions++;
         System.out.println(nrOfSolutions + ". Loesung gefunden, insg. " + nrOfTests  + " Tests: ");
         this.print();
-        // TODO: Sudoku mit Backtracking lösen
     }
 
     public boolean isCorrect(int zeile, int spalte, int zahl) {
