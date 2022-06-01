@@ -11,5 +11,5 @@
 /out/
 *.class
 /scr/*.class
-
+/misc.xml
 
