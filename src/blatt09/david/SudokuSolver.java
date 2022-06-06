@@ -191,7 +191,7 @@ public class SudokuSolver {
 	 * 
 	 * Es wird oben links beginnend versucht, alle Zahlen fuer ein freies Feld
 	 * zu finden, die weder in der Zeile, noch in der Spalte, noch im Block
-	 * doppelt auftauchen.  Falls es eine solche Zahl gibt, wird mit der naechsten
+	 * doppelt auftauchen. Falls es eine solche Zahl gibt, wird mit der naechsten
 	 * Zelle weitergemacht, ansonsten wird die Suche abgebrochen
 	 * (Backtracking) und in der aufrufenden 'suche' die naechste moegliche
 	 * Zahl ausprobiert.
@@ -200,7 +200,24 @@ public class SudokuSolver {
 	 * @param spalte Startspalte der Suche
 	 */
 	public void loesen(int zeile, int spalte) {
-		// TODO: Sudoku mit Backtracking lösen
+		for (zeile = 0; zeile < ROW_SIZE; zeile++) {
+			for (spalte = 0; spalte < ROW_SIZE; spalte++) {
+				if (spielFeld[zeile][spalte] == 0) {
+					for (int i = 1; i <= 9; i++) {
+						if (isSpalteOk(spalte, i) && isZeileOk(zeile, i) && isBlockOk(zeile, spalte, i)) {
+							spielFeld[zeile][spalte] = i;
+							nrOfTests++;
+							loesen(0, 0);
+							spielFeld[zeile][spalte] = 0;
+						}
+					}
+					return;
+				}
+			}
+		}
+		nrOfSolutions++;
+		System.out.println(nrOfSolutions + ". Loesung gefunden, insg. " + nrOfTests  + " Tests: ");
+		this.print();
 	}
 	
 	
