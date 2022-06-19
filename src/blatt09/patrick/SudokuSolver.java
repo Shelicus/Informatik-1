@@ -42,7 +42,7 @@ public class SudokuSolver {
     // Achtung: Arrays enthalten spaeter Loesung!
     private int[][][] testSpielFelder = {
             /* |---------|---------|---------| */
-            {{5, 3, 0, 0, 7, 0, 0, 0, 0},
+            {       {5, 3, 0, 0, 7, 0, 0, 0, 0},
                     {6, 0, 0, 1, 9, 5, 0, 0, 0},
                     {0, 9, 8, 0, 0, 0, 0, 6, 0},
                     /* |---------|---------|---------| */
@@ -57,7 +57,7 @@ public class SudokuSolver {
 
 
             /* |---------|---------|---------| */
-            {{5, 3, 4, 6, 7, 8, 9, 1, 2},
+            {       {5, 3, 4, 6, 7, 8, 9, 1, 2},
                     {6, 7, 2, 1, 9, 5, 3, 4, 8},
                     {1, 9, 8, 3, 4, 2, 5, 6, 7},
                     /* |---------|---------|---------| */
@@ -72,7 +72,7 @@ public class SudokuSolver {
 
 
             /* |---------|---------|---------| */
-            {{0, 0, 0, 5, 4, 2, 0, 0, 0},
+            {       {0, 0, 0, 5, 4, 2, 0, 0, 0},
                     {9, 6, 7, 0, 0, 0, 0, 0, 0},
                     {0, 0, 0, 0, 0, 0, 3, 1, 8},
                     /* |---------|---------|---------| */
@@ -225,7 +225,6 @@ public class SudokuSolver {
         nrOfSolutions++;
         System.out.println(nrOfSolutions + ". Loesung gefunden, insg. " + nrOfTests  + " Tests: ");
         this.print();
-        // TODO: Sudoku mit Backtracking lösen
     }
 
     public boolean isCorrect(int zeile, int spalte, int zahl) {

@@ -200,7 +200,38 @@ public class SudokuSolver {
 	 * @param spalte Startspalte der Suche
 	 */
 	public void loesen(int zeile, int spalte) {
-		// TODO: Sudoku mit Backtracking lösen
+		if(zeile > 8) {
+			System.out.println("Fertig mit " + nrOfTests + " Tests");
+			this.print();//Zeigt das fertige Spielfeld an!.
+			//return; Implizip
+		} else {
+			int nextZeile = zeile;
+			int nextSpalte = spalte;
+			if/*currentPosition has to change*/( this.spielFeld[zeile][spalte] != 0){
+				if/*column end*/(spalte < 8) {
+					nextSpalte = spalte + 1;
+				} else{
+					nextSpalte = 0;//reset
+					nextZeile = zeile + 1;
+				}
+				loesen(nextZeile,nextSpalte);
+			}
+			else/*currentField is 0*/{
+				final int MAXIMUM_NUMBER = 9;
+				for/*numbers are 1..9*/(int numbers = 1; numbers <= 9; numbers++) {
+					nrOfTests++;
+					if(isSpalteOk(spalte, numbers) 
+						&& isZeileOk(zeile, numbers) 
+						&& isBlockOk(zeile, spalte, numbers) ) {	
+						this.spielFeld[zeile][spalte] = numbers;
+						loesen(nextZeile, nextSpalte);
+					}
+				}	
+				//Wert passt nicht
+				this.spielFeld[zeile][spalte] = 0;
+				//return; Implizip
+			}
+		}	
 	}
 	
 	

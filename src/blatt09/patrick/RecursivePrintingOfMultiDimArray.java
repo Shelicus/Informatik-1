@@ -29,8 +29,7 @@
 		 * 
 		 * @param objs
 		 *            Reihung, die Reihungen oder Zeichenketten enthält
-		 */
-		static void printRecursively(Object[] objs) {
+		 */static void printRecursively(Object[] objs) {
 			for (Object obj : objs) {
 				if (obj.getClass().isArray()) {
 					printRecursively((Object[]) obj);
