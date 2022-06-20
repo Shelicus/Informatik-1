@@ -11,6 +11,6 @@ public class SysObjectBase {
 
     @Override
     public String toString() {
-        return "class=" + getClass() + ", Name=" + name + ",| User=" + owner;
+        return "class=" + getClass() + ", Name=" + name + ", User=" + owner;
     }
 }

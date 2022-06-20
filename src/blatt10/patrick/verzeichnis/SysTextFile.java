@@ -9,6 +9,11 @@ public class SysTextFile{
         this.text = text;
     }
 
+    @Override
+    public String toString() {
+        return "class=" + getClass() + ", Name=";
+    }
+
     public String getText() {
         return text;
     }
