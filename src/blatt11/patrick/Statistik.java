@@ -21,8 +21,16 @@ public class Statistik{
 	 * @param name Identifikator/Name für die Statistik
 	 */
 	public Statistik(String name) {
-		this.name = name;
-		this.summe = this.n = 0.;
+		if(name == null)
+			throw new NullPointerException("Name of statistic must not be null.");
+		else if (name.isBlank())
+			throw new RuntimeException("Name of statistic must not be empty.");
+		else if(!Character.isLetter(name.charAt(0)))
+			throw new RuntimeException("Name of statistic must start with a letter.");
+		else {
+			this.name = name;
+			this.summe = this.n = 0.;
+		}
 	}
 	
 	/** Einen neuen Wert der Statistik hinzufügen
@@ -39,7 +47,10 @@ public class Statistik{
 	 * @return Durchschnitt aller Werte
 	 */
 	double getDurchschnitt() {
+		if(n != 0)
 		return this.summe / this.n;
+		else
+			throw new RuntimeException("No average for an empty statistic available.");
 	}
 	
 	/** Statistik in Zeichenkette ausgeben
@@ -47,19 +58,22 @@ public class Statistik{
 	 */
 	@Override
 	public String toString() {
+		if(n != 0 && name != null)
 		return String.format("%12s: n==%10.0f, µ==%8f", 
 				this.name, this.n, this.getDurchschnitt() );
+		else
+			throw new RuntimeException("Empty statistic cannot be serialized.");
 	}
 	
 	
 	/** Statistik in Datei mit dem Namen der Statistik und der Endung ".statistik" ausgeben
 	 * @see <a href="https://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-it-in-java">...</a>
 	 */
-	public void writeToFile()  {
+	public void writeToFile() throws IOException {
 		try {
 			Files.write(Paths.get(this.name + ".statistik"), this.toString().getBytes());
 		} catch (IOException e) {
-			System.out.println(e);
+			throw new IOException("Ja lol ey");
 		}
 	}
 
