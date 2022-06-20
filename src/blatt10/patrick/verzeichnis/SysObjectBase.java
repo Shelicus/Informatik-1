@@ -1,6 +1,6 @@
 package blatt10.patrick.verzeichnis;
 
-public class SysObjectBase {
+public abstract class SysObjectBase {
     private String name;
     private String owner;
 
