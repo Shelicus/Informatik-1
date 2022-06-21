@@ -1,0 +1,8 @@
+1. Weil der Parameter x die Instanzvariable x verdeckt.
+2. Weil die Koordinaten final sind, also nach der Initalisierung nicht mehr veraenderbar.
+3. Es wird ein neuer 2D Punkt erstellt. Die Y-Koordinate wird an der x-Achse gespiegelt.
+4. Eine Linie wird am Mittelpunkt um 90 deg gedreht.
+5. Der erste Punkt ist das this Objekt.
+6. Es ist ein Objekt im Heap. 
+Die Referenz des Parameters auf ein Objekt im Heap wird kopiert.
+Und somit wird das Objekt geaendert.

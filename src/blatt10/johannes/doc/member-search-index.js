@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"blatt10","c":"SysDirectory","l":"dirStructure(String)","u":"dirStructure(java.lang.String)"},{"p":"blatt10","c":"SysDirectory","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"blatt10","c":"SysDirectory","l":"toString()"}];updateSearchResults();
