@@ -1,0 +1,23 @@
+1. Warum muss im gegebenen Konstruktor this verwendet werden?
+ -> Dieser zeigt auf das derzeitige Object im Konstruktor
+
+2. Warum sind die Koordinaten eines Point2D-Objektes nicht änderbar?
+ -> Da dabei ein neues Object erstellt und übergeben wird.
+
+3. Was passiert (grafisch betrachtet) in der Methode Point2D.rotate90DEG?
+ -> Die Seite wird durch das -this.y um 90 grad gedreht
+
+4. Was passiert (grafisch betrachtet) in der Methode Line2D.rotate90Deg?
+ -> Durch das *3/4 werden die Punkte um 90 Grad um den Mittelpunkt gedreht
+
+5. Die diff-Methode berechnet die Differenz zweier 2D-Punkte. Sie hat aber nur
+einen Parameter (p2). Wo kommt der erste Punkt her?
+-> Durch den aufruf eines Punktobjekts ist der erste Punkt gegeben
+
+6. Zum Parameter p2 der diff-Methode:
+
+• Wo wird der gespeichert (Stack, Heap, Method-Area)?
+-> In der Method-Area
+
+• Was ist an dem Parameter "Simuliertes Call By Reference"?
+-> Der Aufruf über this.
