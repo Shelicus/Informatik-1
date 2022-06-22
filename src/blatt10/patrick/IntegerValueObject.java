@@ -35,6 +35,11 @@ public class IntegerValueObject {
     public IntegerValueObject mul(int j) {
         return new IntegerValueObject(i * j);
     }
+
+    /**
+     * Wandelt int i in einen String um
+     * @return Wert i als String
+     */
     @Override
     public String toString() {
         return Integer.toString(i);
