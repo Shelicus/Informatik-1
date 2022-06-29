@@ -4,12 +4,26 @@ public abstract class SysObjectBase {
     private String name;
     private String owner;
 
-    /*private SysObjectBase(String name) {
+    public SysObjectBase(String name) {
         this.name = name;
         owner = System.getenv("USERNAME");
     }
 
-     */
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 
     @Override
     public String toString() {

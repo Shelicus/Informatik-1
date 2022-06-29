@@ -16,5 +16,7 @@ public class Testen {
         home.setName("HOME");
         home.setOwner("brul0001");
         System.out.printf("%s\n", home);
+        System.out.printf("%s\n", home.dirStructure(""));
+
     }
 }

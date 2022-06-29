@@ -19,14 +19,9 @@ public class ExampleForDivByZeroException {
         try {
             output = z / n;
         } catch (java.lang.ArithmeticException e) {
-            System.err.println("Fehlergrund: \"/ by zero\"\n" +
-                    "java.lang.ArithmeticException: / by zero\n" +
-                    "at\n" +
-                    "blatt11.ExampleForDivByZeroException.div(ExampleForDivByZeroExceptio\n" +
-                    "n.java:17)\n" +
-                    "at\n" +
-                    "blatt11.ExampleForDivByZeroException.main(ExampleForDivByZeroExcepti\n" +
-                    "on.java:31)");
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+
             output = Integer.MAX_VALUE;
         }
         return output;

@@ -2,10 +2,11 @@ package blatt10.patrick.verzeichnis;
 
 public class SysDirectory extends SysObjectBase{
     SysObjectBase[] sysObjects;
-    String name;
-    String owner;
 
     public SysDirectory(String name, SysObjectBase ... sysObjects){
+        super(name);
+        this.sysObjects = sysObjects;
+
     }
 
     /** Struktur des Verzeichnisses ermitteln
@@ -14,20 +15,23 @@ public class SysDirectory extends SysObjectBase{
      * @return Struktur des Verzeichnisses als String
      */
     public String dirStructure(String indent){
-        return indent + this.toString();
-    }
+        String s = "";
+        indent += "| - ";
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
+        for (SysObjectBase sysObject : sysObjects) {
+            if (sysObject instanceof SysDirectory) {
+                s+= indent + sysObject.toString() + "\n";
+                s += ((SysDirectory)sysObject).dirStructure(indent);
+            } else {
+                s += indent + sysObject.toString() + "\n";
+            }
+        }
+        return s;
     }
 
     @Override
     public String toString(){
-        return "class=" + getClass() + ", Name=" + name + ", User=" + owner + ", NumberOfObjects=" + sysObjects.length;
+        return super.toString() +" NumberOfObjects=" + sysObjects.length;
     }
 
 
