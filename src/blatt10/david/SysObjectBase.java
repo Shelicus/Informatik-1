@@ -1,24 +1,52 @@
 package blatt10.david;
 
-public class SysObjectBase {
+public abstract class SysObjectBase {
     private String name;
     private String owner;
 
-    public String getterName(){
+    /** Constructor
+     * @param name of the Object
+     * owner is the Owner of the User
+     */
+    SysObjectBase(String name){
+        this.name = name;
+        this.owner = System.getenv("USERNAME");
+    }
+
+    /** Setter Owner
+     * @param owner
+     */
+    protected void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    /** Setter Name
+     * @param name
+     */
+    protected void setName(String name) {
+        this.name = name;
+    }
+
+    /** Getter Name
+     */
+    protected String getName(){
         return this.name;
     }
 
-    public String getterOwner(){
+    /** Getter Owner
+     */
+    protected String getOwner(){
         return this.owner;
     }
 
-    private SysObjectBase(String name){
-        this.name = name;
-        owner = System.getenv("USERNAME");
-    }
 
+    /**Override toString
+     * @return prints the Class, Name and User
+     */
     @Override
     public String toString() {
-        return "class=" + getClass() + ", Name=" + name + ", User=" + owner;
+        return String.format("Class=%s, Name=%s, User=%s,",
+                this.getClass().getSimpleName(), this.getName(), this.getOwner());
     }
+
 }
