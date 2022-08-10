@@ -2,8 +2,8 @@
 	package blatt02;
 	public class Fahrenheit4 {
 		/**
-		 * Geg.: Temperaturbereich in 째F <br/>
-		 * Ges.: Temperaturliste in 째C
+		 * Geg.: Temperaturbereich in 캟 <br/>
+		 * Ges.: Temperaturliste in 캜
 		 *
 		 * @param args unused
 		 */
@@ -14,20 +14,15 @@
 			final int STEP = 25; // Schrittweite
 			final int NUM_PER_ROW = 5; //Schrittweite der Ausgabe
 
-
 			//Aufgabenteil A
-
 			for (int fahrenheit = LOWER; fahrenheit <= UPPER; fahrenheit += STEP) {
-				//Berechnung
 				int celsius = 5 * (fahrenheit - 32) / 9;
-
-				//erste funktionierende Loesung
 				if (fahrenheit == 0) {
-					System.out.print(fahrenheit + " 째F = " + celsius + "째C\t");
+					System.out.print(fahrenheit + " 캟 = " + celsius + "캜\t");
 				} else if (fahrenheit % 125 == 0) {
-					System.out.print("\n" + fahrenheit + " 째F = " + celsius + "째C\t");
+					System.out.print("\n" + fahrenheit + " 캟 = " + celsius + "캜\t");
 				} else {
-					System.out.print(fahrenheit + " 째F = " + celsius + "째C\t");
+					System.out.print(fahrenheit + " 캟 = " + celsius + "캜\t");
 				}
 
 			}
@@ -44,11 +39,11 @@
 
 				// Zusatzaufgabe
 				if (fahrenheit == 0) {
-					System.out.print(fahrenheit + " 째F = " + celsius + "째C\t");
+					System.out.print(fahrenheit + " 캟 = " + celsius + "캜\t");
 				} else if (fahrenheit % (NUM_PER_ROW * STEP) == 0) {
-					System.out.print("\n" + fahrenheit + " 째F = " + celsius + "째C\t");
+					System.out.print("\n" + fahrenheit + " 캟 = " + celsius + "캜\t");
 				} else {
-					System.out.print(fahrenheit + " 째F = " + celsius + "째C\t");
+					System.out.print(fahrenheit + " 캟 = " + celsius + "캜\t");
 				}
 			}
 		}

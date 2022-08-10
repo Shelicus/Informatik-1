@@ -37,7 +37,7 @@ public class SysDirectory extends SysObjectBase {
 		String ret = indent + this.toString() + "\n";
 		indent += "| - ";
 		for(SysObjectBase obj : sysObjects) {
-			if(obj instanceof SysDirectory) {
+			if(obj instanceof SysDirectory) {//oder: obj.getClass().getSimpleName().equals("SysTextFile")
 				SysDirectory dir = (SysDirectory)obj;
 				ret += dir.dirStructure(indent);
 			} else {
@@ -47,19 +47,23 @@ public class SysDirectory extends SysObjectBase {
 		return ret;
 	 }
 	 
-//	 public String dirStructure(String indent) {
-//		String ret = "";
-//		for(Object obj : sysObjects) {
-//			if(obj.getClass().getSimpleName().equals("SysTextFile")) {
-//				ret += indent + obj.toString() + "\n";
-//				continue;
-//			} else {
-//				ret += indent + obj.toString() + "\n";
-//				dirStructure(indent + "| - ");
-//			}
-//		} 
-//		return ret;
-//	 }
+	 /** Verzeichnisse nach Ressource durchsuchen, deren Namen eine Teilzeichenkette
+	 * enthält. Bei jedem Treffer wird der Name der Ressource ausgegeben.
+	 *
+	 * @param searchFor Zeichenkette, nach der in den Namen der Ressourcen
+	 * gesucht wird
+	 * */
+	 public void findName(String searchFor) {
+		 for(SysObjectBase obj : this.sysObjects) {
+			 if(obj.getName().contains(searchFor)) {
+					System.out.println(obj.getName());
+					}
+			 if(obj instanceof SysDirectory) {
+				((SysDirectory)obj).findName(searchFor);
+			 }
+		 }
+		 return;
+	 }
 
 	public static void main(String[] args) {
 		SysTextFile hello = new SysTextFile("Hello", "java");
@@ -80,6 +84,10 @@ public class SysDirectory extends SysObjectBase {
 //		System.out.printf("%s\n", home);
 		
 		System.out.printf("%s\n", home.dirStructure(""));
+		
+		String find = "e";
+		System.out.println("\nFind '" + find + "':");
+		home.findName(find);
 	}
 
 }
