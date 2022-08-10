@@ -62,7 +62,6 @@ public class SysDirectory extends SysObjectBase {
 				((SysDirectory)obj).findName(searchFor);
 			 }
 		 }
-		 return;
 	 }
 
 	public static void main(String[] args) {
