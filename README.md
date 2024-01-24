@@ -4,7 +4,8 @@
 
 ## Beschreibung:
 Das sind die Aufgaben von Programmieren 1 des ersten Semster der Hochschule Karlsruhe. 
-Das Repository enthält die bearbeitug der einzelaufgaben von allen Teammitgliedern und die Teamaufgaben. 
+Das Repository enthält ausarbeitung der Einzelaufgaben von allen Teammitgliedern und die Teamaufgaben. 
+Das Repsitory befindet sich in read-only und wird nicht weiter bearbeitet oder gewartet.
 
 ## Verzeichnis:
 > **Schnellster Start:** Quick-Start-Vorbereitung und Quick-Start-Befehle
@@ -64,7 +65,7 @@ Das Repository enthält die bearbeitug der einzelaufgaben von allen Teammitglied
 ## Licenze:
 
 Die Lizenz zur weiter Verwendung dieses Projektes, wird durch das **Creative Common** Model angegeben. 
-Bei Ablehnung jeglicher Verwendung durch meinerseits mit den Piktogrammen oder Sie möchten das Projekt in einer Form verwenden, die nicht hier genannt wurde, muss vor 
+Bei Ablehnung jeglicher Verwendung durch meinerseits mit den Piktogrammen oder Sie möchten das Projekt in einer Form verwenden die nicht hier genannt wurde, muss vor 
 der Benutzung des Projektes die Zustimmung eingeholt werden.
 
 |Verwendet|Piktogramm|Bezeichnung|Verlinkung|
